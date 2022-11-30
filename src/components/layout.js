@@ -1,0 +1,86 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function Layout({ children, pageTitle }) {
+  return (
+    <div className="max-w-5xl min-h-screen m-auto">
+      <title>Articles | {pageTitle} </title>
+      <header aria-label="Site Header" className="bg-gray-50">
+        <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-1 items-center justify-end md:justify-between">
+            <nav aria-label="Site Nav" className="hidden md:block">
+              <ul className="flex items-center gap-6 text-sm">
+                <li className="border-r-2 border-black pr-2 font-semibold text-lg">
+                  Articles
+                </li>
+                <li>
+                  <Link
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    to="/home"
+                  >
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    to="/about"
+                  >
+                    About
+                  </Link>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="/"
+                  >
+                    History
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="/"
+                  >
+                    Services
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="/"
+                  >
+                    Projects
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="/"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div>{children}</div>
+      <footer aria-label="Site Footer" className="bg-gray-50 bottom-0">
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <p className="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
+              Copyright &copy; 2022. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
