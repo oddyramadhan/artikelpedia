@@ -51,7 +51,7 @@ export default function Search() {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle="Search Your Articles">
       <div class="mt- mb-6 flex justify-end">
         <div class="relative max-w-lg">
           <input

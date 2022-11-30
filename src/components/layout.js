@@ -8,7 +8,7 @@ export default function Layout({ children, pageTitle }) {
 
   return (
     <div className="max-w-5xl min-h-screen m-auto">
-      <title>Articles {pageTitle} </title>
+      <title>Articles | {pageTitle} </title>
       <header
         aria-label="Site Header"
         className={theme.theme === "light" ? "bg-gray-50" : "bg-black"}

@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 export default function About() {
   const theme = useContext(ThemeContext);
   return (
-    <Layout>
+    <Layout pageTitle="About Us">
       <div
         className={
           theme.theme === 'light'
